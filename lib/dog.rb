@@ -49,6 +49,9 @@ class Dog
     dog
   end
 
+  def self.new_from_db
+  end
+
   def self.find_by_id(id)
     # find the student in the database given a name
     # return a new instance of the Student class
