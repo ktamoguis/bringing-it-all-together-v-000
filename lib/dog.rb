@@ -33,14 +33,14 @@ class Dog
     if self.id
       self.update
     else
-      binding.pry
+      #binding.pry
       sql = <<-SQL
         INSERT INTO dogs (name, breed)
         VALUES (?, ?)
       SQL
       DB[:conn].execute(sql, self.name, self.breed)
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
-      binding.pry
+      #binding.pry
     end
   end
 
